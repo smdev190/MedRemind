@@ -50,9 +50,7 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- Gemini-Api
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/363793c5-470d-4deb-8c5b-11e739dd3baf) and click on Share -> Publish.
 
 
