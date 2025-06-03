@@ -2,9 +2,9 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Clock, Calendar, Info, Check, Edit } from 'lucide-react';
-import Header from '../components/Header';
+import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/components/ui/use-toast';
 import { sampleMedications, MedicationType } from '../data/medicationData';
 
 const MedicationDetail = () => {

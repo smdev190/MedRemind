@@ -14,10 +14,10 @@ const Navigation = () => {
       <div className="flex justify-around items-center h-16 max-w-3xl mx-auto">
         <Link
           to="/"
-          className={`flex flex-col items-center justify-center w-full h-full ${
+          className={`flex flex-col items-center justify-center w-full h-full transition-colors duration-150 ease-in-out ${
             isActive('/') 
             ? 'text-blue-500 dark:text-blue-400' 
-            : 'text-gray-500 dark:text-gray-400'
+            : 'text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400'
           }`}
         >
           <Home size={20} />
@@ -26,10 +26,10 @@ const Navigation = () => {
         
         <Link
           to="/calendar"
-          className={`flex flex-col items-center justify-center w-full h-full ${
+          className={`flex flex-col items-center justify-center w-full h-full transition-colors duration-150 ease-in-out ${
             isActive('/calendar') 
             ? 'text-blue-500 dark:text-blue-400' 
-            : 'text-gray-500 dark:text-gray-400'
+            : 'text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400'
           }`}
         >
           <Calendar size={20} />
@@ -38,10 +38,10 @@ const Navigation = () => {
         
         <Link
           to="/chat"
-          className={`flex flex-col items-center justify-center w-full h-full ${
+          className={`flex flex-col items-center justify-center w-full h-full transition-colors duration-150 ease-in-out ${
             isActive('/chat') 
             ? 'text-blue-500 dark:text-blue-400' 
-            : 'text-gray-500 dark:text-gray-400'
+            : 'text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400'
           }`}
         >
           <MessageSquare size={20} />
@@ -50,10 +50,10 @@ const Navigation = () => {
         
         <Link
           to="/profile"
-          className={`flex flex-col items-center justify-center w-full h-full ${
+          className={`flex flex-col items-center justify-center w-full h-full transition-colors duration-150 ease-in-out ${
             isActive('/profile') 
             ? 'text-blue-500 dark:text-blue-400' 
-            : 'text-gray-500 dark:text-gray-400'
+            : 'text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400'
           }`}
         >
           <User size={20} />

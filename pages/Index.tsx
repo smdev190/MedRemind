@@ -2,8 +2,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Plus, Clock, Check } from 'lucide-react';
-import Header from '../components/Header';
-import Navigation from '../components/Navigation';
+import Header from '@/components/Header';
+import Navigation from '@/components/Navigation';
 import { sampleMedications } from '../data/medicationData';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -53,16 +53,16 @@ const Index = () => {
         
         {/* Upcoming Medications */}
         <div className="mb-6">
-          <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Upcoming Medications</h2>
+          <h2 className="med-subheader">Upcoming Medications</h2>
           
           {/* Medication Cards */}
           {sampleMedications.map((med) => (
             <Link to={`/medication/${med.id}`} key={med.id} className="block mb-4">
-              <Card className={`overflow-hidden ${med.status === 'upcoming' ? 'bg-blue-500 text-white dark:bg-blue-600' : 'bg-white dark:bg-gray-800'}`}>
+              <Card className={`overflow-hidden ${med.status === 'upcoming' ? 'bg-blue-500 text-white dark:bg-blue-600' : 'bg-white dark:bg-gray-800'} hover:shadow-lg transition-shadow duration-200 ease-out`}>
                 <div className="p-4">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h3 className="font-semibold text-lg">{med.name} {med.dosage}</h3>
+                      <h3 className="med-card-title">{med.name} {med.dosage}</h3>
                       <p className="text-sm opacity-90">
                         {med.instructions.split('|')[0]} | {med.instructions.split('|')[1] || '1 tablet'}
                       </p>

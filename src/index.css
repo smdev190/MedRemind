@@ -35,6 +35,28 @@
 
     --radius: 0.75rem;
   }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 217 91% 60%;
+  }
 }
 
 @layer base {
@@ -53,38 +75,59 @@
   }
   
   .med-header {
-    @apply text-2xl font-bold text-med-dark-gray mb-6;
+    @apply text-2xl font-bold text-gray-700 dark:text-gray-300 mb-6;
   }
   
   .med-subheader {
-    @apply text-xl font-semibold text-med-dark-gray mb-4;
+    @apply text-xl font-semibold text-gray-700 dark:text-gray-300 mb-4;
   }
   
   .med-card {
-    @apply bg-white rounded-xl shadow-md p-4 mb-3 animate-fade-in border border-gray-100;
+    @apply bg-card rounded-xl shadow-md p-4 mb-3 animate-fade-in border; /* Use bg-card and default border */
   }
   
   .med-button-primary {
-    @apply bg-med-blue text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-600 transition-colors min-w-[120px] text-center;
+    @apply bg-primary text-primary-foreground py-3 px-6 rounded-lg font-medium hover:bg-primary/90 transition-colors min-w-[120px] text-center;
   }
   
   .med-button-secondary {
-    @apply bg-med-light-gray text-med-dark-gray py-3 px-6 rounded-lg font-medium hover:bg-gray-200 transition-colors min-w-[120px] text-center;
+    @apply bg-muted text-muted-foreground py-3 px-6 rounded-lg font-medium hover:bg-muted/90 transition-colors min-w-[120px] text-center;
   }
   
   .med-status-completed {
-    @apply inline-flex items-center bg-green-100 text-med-green text-xs px-2 py-0.5 rounded-full;
+    @apply inline-flex items-center bg-green-100 text-green-700 dark:bg-green-700 dark:text-green-100 text-xs px-2 py-0.5 rounded-full;
   }
   
   .med-status-upcoming {
-    @apply inline-flex items-center bg-blue-100 text-med-blue text-xs px-2 py-0.5 rounded-full;
+    @apply inline-flex items-center bg-blue-100 text-blue-700 dark:bg-blue-700 dark:text-blue-100 text-xs px-2 py-0.5 rounded-full;
   }
   
   .med-status-missed {
-    @apply inline-flex items-center bg-red-100 text-med-red text-xs px-2 py-0.5 rounded-full;
+    @apply inline-flex items-center bg-red-100 text-red-700 dark:bg-red-700 dark:text-red-100 text-xs px-2 py-0.5 rounded-full;
   }
   
   .med-status-warning {
-    @apply inline-flex items-center bg-orange-100 text-med-orange text-xs px-2 py-0.5 rounded-full;
+    @apply inline-flex items-center bg-orange-100 text-orange-700 dark:bg-orange-700 dark:text-orange-100 text-xs px-2 py-0.5 rounded-full;
+  }
+
+  .med-card-title {
+    @apply font-semibold text-lg; /* Color will be contextual based on card background */
+  }
+
+  /* For react-day-picker event indicators */
+  .rdp-day_content {
+    position: relative;
+  }
+
+  .day-has-events .rdp-day_content::after {
+    content: '';
+    position: absolute;
+    bottom: 4px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px; /* Adjust as needed */
+    height: 5px; /* Adjust as needed */
+    border-radius: 50%;
+    background-color: hsl(var(--primary));
   }
 }
