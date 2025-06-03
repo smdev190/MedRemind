@@ -1,6 +1,6 @@
 
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
+import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/components/ui/use-toast';

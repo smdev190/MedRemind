@@ -66,13 +66,13 @@ const MedicationCard = ({ medication }: MedicationCardProps) => {
 
   return (
     <Card 
-      className={medication.status === 'upcoming' ? 'bg-blue-500 text-white' : 'bg-white dark:bg-gray-800'} 
+      className={`${medication.status === 'upcoming' ? 'bg-blue-500 text-white dark:bg-blue-600' : 'bg-white dark:bg-gray-800'} hover:shadow-lg hover:cursor-pointer transition-all duration-200 ease-out`}
       onClick={handleMedicationClick}
     >
       <div className="p-4">
         <div className="flex justify-between items-start">
           <div>
-            <h3 className="font-semibold text-lg">{medication.name} {medication.dosage}</h3>
+            <h3 className="med-card-title">{medication.name} {medication.dosage}</h3>
             <p className="text-sm opacity-90">{medication.instructions}</p>
           </div>
           <div className="text-right">

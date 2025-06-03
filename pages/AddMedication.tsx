@@ -1,12 +1,12 @@
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Header from '../components/Header';
+import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/components/ui/use-toast';
 import { sampleMedications, MedicationType } from '../data/medicationData';
 
 const AddMedication = () => {
@@ -89,7 +89,7 @@ const AddMedication = () => {
       
       <div className="med-container">
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="med-card dark:bg-gray-800 dark:border-gray-700">
+          <div className="med-card">
             <div className="space-y-4">
               <div>
                 <Label htmlFor="name" className="text-med-dark-gray dark:text-gray-300">
@@ -134,7 +134,7 @@ const AddMedication = () => {
             </div>
           </div>
           
-          <div className="med-card dark:bg-gray-800 dark:border-gray-700">
+          <div className="med-card">
             <h2 className="med-subheader mb-4 dark:text-white">Schedule</h2>
             <div className="space-y-4">
               <div>
@@ -173,7 +173,7 @@ const AddMedication = () => {
             </div>
           </div>
           
-          <div className="med-card dark:bg-gray-800 dark:border-gray-700">
+          <div className="med-card">
             <h2 className="med-subheader mb-4 dark:text-white">Refill Information</h2>
             <div className="space-y-4">
               <div>

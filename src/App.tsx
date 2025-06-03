@@ -5,14 +5,14 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import AddMedication from "./pages/AddMedication";
-import MedicationDetail from "./pages/MedicationDetail";
-import EditMedication from "./pages/EditMedication";
-import Profile from "./pages/Profile";
-import Chat from "./pages/Chat";
-import Calendar from "./pages/Calendar";
+import Index from "../pages/Index";
+import NotFound from "../pages/NotFound";
+import AddMedication from "../pages/AddMedication";
+import MedicationDetail from "../pages/MedicationDetail";
+import EditMedication from "../pages/EditMedication";
+import Profile from "../pages/Profile";
+import Chat from "../pages/Chat";
+import Calendar from "../pages/Calendar";
 
 const queryClient = new QueryClient();
 

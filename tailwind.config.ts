@@ -62,15 +62,7 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				// Custom medication app colors
-				"med-blue": "#3B82F6",
-				"med-green": "#10B981",
-				"med-orange": "#F59E0B",
-				"med-red": "#EF4444",
-				"med-light-gray": "#F3F4F6",
-				"med-gray": "#9CA3AF",
-				"med-dark-gray": "#4B5563"
+				}
 			},
 			fontFamily: {
 				sans: ['SF Pro', 'Roboto', 'sans-serif'],

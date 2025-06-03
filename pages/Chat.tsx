@@ -1,11 +1,11 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import Header from '../components/Header';
-import Navigation from '../components/Navigation';
+import Header from '@/components/Header';
+import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Camera, SendHorizontal } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/components/ui/use-toast';
 
 // Define types for chat messages
 interface ChatMessage {
@@ -210,7 +210,7 @@ const Chat = () => {
                 onChange={(e) => setInputMessage(e.target.value)}
                 onKeyPress={handleKeyPress}
                 disabled={isLoading}
-                className="pr-10 dark:bg-gray-700 dark:border-gray-600"
+                className="pr-10"
               />
             </div>
             
